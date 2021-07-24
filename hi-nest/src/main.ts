@@ -7,7 +7,7 @@ async function bootstrap() {
   app.useGlobalPipes(new ValidationPipe({
     whitelist: true,
     forbidNonWhitelisted: true,
-    transform: true,
+    transform: true, //유저들이 보낸걸 실제 사용하는 타입으로 변환시켜 줌 
   }));
   await app.listen(3000);
 }
